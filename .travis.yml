@@ -1,0 +1,19 @@
+dist: xenial
+language: rust
+cache: cargo
+
+matrix:
+  include:
+    - env: TARGET=arm-unknown-linux-gnueabihf CARGO_TARGET_ARM_UNKNOWN_LINUX_GNUEABIHF_LINKER=arm-linux-gnueabihf-gcc PKG_CONFIG_ALLOW_CROSS=1
+
+script:
+  ci/arm-cross-compile.sh
+
+deploy:
+  provider: releases
+  api_key: $GITHUB_TOKEN
+  file: $TARGET.tar.gz
+  skip-cleanup: true
+  on:
+    repo: pashinov/falcon-rservice
+    tags: true
