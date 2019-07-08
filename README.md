@@ -1,6 +1,6 @@
 ## The example of cross-compiling Rust application for Raspberry Pi
 
-### The Rust client of Falcon platform was taken as an example
+The Rust client of Falcon platform was taken as an example
 
 [![Build Status][travis-badge]][travis-link]
 [![License][license-badge]][license-link]
