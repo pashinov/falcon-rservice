@@ -15,5 +15,5 @@ deploy:
   file: $TARGET.tar.gz
   skip-cleanup: true
   on:
-    repo: pashinov/falcon-rservice
+    repo: pashinov/rust-cross-compile
     tags: true
